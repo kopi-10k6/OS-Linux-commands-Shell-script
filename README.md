@@ -24,42 +24,73 @@ Testing the commands for the desired output.
 ### Create the following files file1, file2 as follows:
 cat > file1
 ```
-chanchal singhvi
-c.k. shukla
-s.n. dasgupta
-sumit chakrobarty
+ajay
+arya
+sanjai
+surya
 ^d
 ```
 cat > file2
 ```
-anil aggarwal
-barun sengupta
-c.k. shukla
-lalit chowdury
-s.n. dasgupta
+avi 
+anjana
+kaviya
+swetha
 ^d
 ```
 ### Display the content of the files
 cat < file1
 ## OUTPUT
-
+```
+ajay
+arya
+sanjai
+surya
+```
 
 
 cat < file2
 ## OUTPUT
-
+```
+avi 
+anjana
+kaviya
+swetha
+```
 
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
- 
+ ```
+file1 file2 differ: byte 2, line 1
+```
 comm file1 file2
  ## OUTPUT
-
+```
+ajay
+arya
+	avi
+	anjana
+	kaviya
+sanjai
+surya
+	swetha
+```
  
 diff file1 file2
 ## OUTPUT
-
+```
+1,4c1,4
+< ajay
+< arya
+< sanjai
+< surya
+---
+> avi
+> anjana
+> kaviya
+> swetha
+```
 
 #Filters
 
@@ -82,18 +113,29 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
+```
+Hel
+Thi
+```
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
+```
+1001 
+1002 
+1003
+```
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+```
+ Ram 
+ tom 
+ Jeo
+```
 
 cat < newfile 
 ```
@@ -107,40 +149,43 @@ hello world
  
 grep Hello newfile 
 ## OUTPUT
+<img width="136" height="25" alt="image" src="https://github.com/user-attachments/assets/4a726866-d313-4baf-a019-ac7c36ddb3b4" />
 
 
 
 grep hello newfile 
 ## OUTPUT
 
-
-
+<img width="136" height="25" alt="image" src="https://github.com/user-attachments/assets/d521e00f-ea7c-4ac5-9269-e24d3eeb5c1f" />
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+Hello world
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
+<img width="140" height="50" alt="image" src="https://github.com/user-attachments/assets/34d429b8-e559-4e95-a99b-98c5d467f724" />
 
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
+2
 
 
 grep -R ubuntu /etc
 ## OUTPUT
 
+<img width="1283" height="623" alt="image" src="https://github.com/user-attachments/assets/dcb09a25-4904-47f1-a11f-c300ca26f8af" />
 
 
 grep -w -n world newfile   
 ## OUTPUT
 
+<img width="161" height="43" alt="image" src="https://github.com/user-attachments/assets/9b64b2f0-304c-43d6-98a3-4c0c447ffa8b" />
 
 cat < newfile 
 ```
@@ -164,58 +209,71 @@ Linux is best in this World
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
 
+<img width="161" height="43" alt="image" src="https://github.com/user-attachments/assets/257000d1-44db-4083-8233-7489f09ce4db" />
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
 
+<img width="161" height="43" alt="image" src="https://github.com/user-attachments/assets/67b28081-22e3-43f8-9fea-b9453a046c0a" />
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
 
+<img width="161" height="43" alt="image" src="https://github.com/user-attachments/assets/8fe7799f-4bb5-4afd-b4ac-3d8bc3048470" />
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
 
+<img width="161" height="28" alt="image" src="https://github.com/user-attachments/assets/6fc840e0-11d7-44ce-a4fa-8e8385211ee4" />
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
+<img width="162" height="44" alt="image" src="https://github.com/user-attachments/assets/3a68dc70-2604-4cdd-80cd-39add187cad7" />
 
 
 egrep '(World$)' newfile 
 ## OUTPUT
 
+<img width="162" height="44" alt="image" src="https://github.com/user-attachments/assets/93ab3b5e-ad7a-41cd-9c09-1ce9a9c5576c" />
+
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
+<img width="316" height="69" alt="image" src="https://github.com/user-attachments/assets/af43d222-d59e-4765-a2ee-9022da45a8ff" />
 
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
+<img width="317" height="28" alt="image" src="https://github.com/user-attachments/assets/c92e22af-c4cc-46bf-9611-7bc99f9cb077" />
 
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
+<img width="317" height="28" alt="image" src="https://github.com/user-attachments/assets/16cb9f3c-f372-4bff-a9db-e4b936d5a912" />
 
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 
+<img width="315" height="48" alt="image" src="https://github.com/user-attachments/assets/36f3b52c-0063-4272-945a-b0de5e08fa8b" />
 
 egrep l{2} newfile
 ## OUTPUT
 
+<img width="317" height="28" alt="image" src="https://github.com/user-attachments/assets/4bc5f8b5-15b1-499e-acc8-4d269cc64390" />
 
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
+<img width="378" height="92" alt="image" src="https://github.com/user-attachments/assets/62489ed4-3ef8-4a22-ba00-aa4624d816e2" />
 
 
 cat > file23
@@ -235,80 +293,138 @@ cat > file23
 sed -n -e '3p' file23
 ## OUTPUT
 
-
+1002 | tom |  5000 | Admin
 
 sed -n -e '$p' file23
 ## OUTPUT
 
-
+1001 | Ram | 10000 | HR
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+1001 | Sita | 10000 | HR
+1001 | Sita | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Sita | 10000 | HR
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
 
-
+1001 | Ram | 10000 | HR
+1001 | Sita | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
 
-
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  6000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+1003 | Joe |  7000 | Developer
+1001 | Ram | 10000 | HR
 
 sed -n -e '1,5p' file23
 ## OUTPUT
-
-
-
+```
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+```
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
-
-
-
+```
+1001 | Ram | 10000 | HR
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
-
-
+```
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+```
 seq 10 
 ## OUTPUT
-
-
-
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+```
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-
-
-
+```
+4
+5
+6
+```
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-
-
-
+```
+2
+3
+4
+```
 seq 3 | sed '2a hello'
 ## OUTPUT
-
-
-
+```
+1
+2
+hello
+3
+```
 seq 2 | sed '2i hello'
 ## OUTPUT
-
-
+```
+1
+hello
+2
+```
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
-
+```
+1
+hello
+10
+```
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-
-
-
+```
+$1001 | Ram | 10000 | HR
+$1001 | Ram | 10000 | HR
+$1002 | tom |  5000 | Admin
+```
 sed -n '2,4{s/$/*/;p}' file23
-
-
+```
+1001 | Ram | 10000 | HR
+1002 | tom |  5000 | Admin
+1003 | Joe |  7000 | Developer
+1005 | Sam |  5000 | HR
+1004 | Sit |  7000 | Dev
+```
 #Sorting File content
 cat > file21
 ```
