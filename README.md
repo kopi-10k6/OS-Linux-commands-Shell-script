@@ -450,6 +450,7 @@ cat > file22
 uniq file22
 ## OUTPUT
 
+<img width="664" height="236" alt="image" src="https://github.com/user-attachments/assets/482ab662-2f82-4936-9016-6d719c4d592e" />
 
 
 #Using tr command
@@ -473,17 +474,20 @@ www. mrcet.... com
 cat urllist.txt | tr -d ' '
  ## OUTPUT
 
+v<img width="503" height="146" alt="image" src="https://github.com/user-attachments/assets/cd592648-41db-44d8-99b2-fb86a2966533" />
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 
+<img width="645" height="145" alt="image" src="https://github.com/user-attachments/assets/58183c33-9960-4e26-bd96-1f755c1ee6be" />
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
 
+<img width="708" height="734" alt="image" src="https://github.com/user-attachments/assets/f46b31e7-6293-4389-8fe3-9d0f0fce148c" />
 
 mkdir backupdir
  
@@ -493,20 +497,24 @@ cd backupdir
  
 tar -tvf backup.tar
 ## OUTPUT
+<img width="1025" height="711" alt="image" src="https://github.com/user-attachments/assets/08bd6a72-7880-4778-92e7-9970bdda2acd" />
 
 
 tar -xvf backup.tar
 ## OUTPUT
+<img width="1016" height="715" alt="image" src="https://github.com/user-attachments/assets/779f4448-8ca8-4a41-badc-b12bed111266" />
 
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- 
+ <img width="971" height="67" alt="image" src="https://github.com/user-attachments/assets/90c9c9b5-5498-46bd-94f4-6585793f50f0" />
+
 gunzip backup.tar.gz
 ## OUTPUT
 
- 
+ <img width="1021" height="81" alt="image" src="https://github.com/user-attachments/assets/865b88e3-d76f-4556-99e0-c597b80c469d" />
+
 # Shell Script
 ```
 echo '#!/bin/sh' > my-script.sh
@@ -695,6 +703,7 @@ fi
 ./ifnested.sh 
 ## OUTPUT
 
+<img width="803" height="248" alt="image" src="https://github.com/user-attachments/assets/6e683cbc-a073-4e95-b0c4-1c944c5dfc86" />
 
 
 # using numeric test comparisons
@@ -816,6 +825,7 @@ $ chmod 755 elifcheck.sh
 $ ./elifcheck.sh 
 ## OUTPUT
 
+<img width="834" height="137" alt="image" src="https://github.com/user-attachments/assets/a1d24ca8-42cb-4ada-89e6-1a35d8460180" />
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -964,6 +974,7 @@ Khammam
 
 ## OUTPUT
 
+<img width="906" height="195" alt="image" src="https://github.com/user-attachments/assets/cd19f222-cd03-4e37-a166-5f2f713290ac" />
 
 cat forctype.sh 
 ```bash
@@ -1026,6 +1037,8 @@ echo "The for loop is completed“
 ```
 ## OUTPUT
 
+<img width="592" height="156" alt="image" src="https://github.com/user-attachments/assets/b5963643-325d-4703-a950-2845189e659a" />
+
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
@@ -1050,7 +1063,8 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
+ <img width="596" height="167" alt="image" src="https://github.com/user-attachments/assets/736bdb6c-f4a1-4d81-8b77-41cb2cc2f7bd" />
+
 cat exread.sh 
 ```bash
 #!/bin/bash
@@ -1065,6 +1079,7 @@ $ chmod 755 exread.sh
 $ ./exread.sh 
 ## OUTPUT
 
+<img width="736" height="262" alt="image" src="https://github.com/user-attachments/assets/cf817af1-164b-4d51-887b-b2664ca4470a" />
 
  cat exread1.sh
 ```bash
@@ -1077,6 +1092,7 @@ $ chmod 755 exread1.sh
 
 ## OUTPUT
 
+<img width="498" height="193" alt="image" src="https://github.com/user-attachments/assets/c1ef7f31-1a0e-48ff-a44a-7019f1313bf9" />
 
 
 $ ./exread1.sh 
@@ -1099,7 +1115,8 @@ fi
 ## OUTPUT
  ./funcex.sh 
 
- 
+ <img width="614" height="220" alt="image" src="https://github.com/user-attachments/assets/8a28c10d-494b-4171-96cd-426d499ad13b" />
+
  ./funcex.sh 1 2
 
  
@@ -1115,7 +1132,8 @@ $ chmod 777 argshift.sh
 
 ## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+ <img width="365" height="119" alt="image" src="https://github.com/user-attachments/assets/126214ee-3fe3-4853-afda-c0e5858a4ac5" />
+
  cat argshift1.sh
 ```bash
  #/bin/bash 
@@ -1132,7 +1150,8 @@ done
 $ chmod 777 argshift.sh
 ## OUTPUT
 $ ./argshift.sh 1 2 3
- 
+ <img width="512" height="119" alt="image" src="https://github.com/user-attachments/assets/bbef58e3-2376-4e2d-a945-63090515ff39" />
+
 cat argshift.sh
 ```bash
 #!/bin/bash 
@@ -1146,7 +1165,8 @@ set +x
 ## OUTPUT
  ./argshift.sh 1 2 3
  
- 
+ <img width="599" height="164" alt="image" src="https://github.com/user-attachments/assets/8e683943-eef0-4ca2-9e3a-84accbb91b9e" />
+
 cat > nc.awk
 ```bash
 BEGIN{}
@@ -1176,7 +1196,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ <img width="705" height="389" alt="image" src="https://github.com/user-attachments/assets/13d74f11-d39e-4868-94ab-30771115837d" />
+
 cat > palindrome.sh
 ```bash
 #num=545
